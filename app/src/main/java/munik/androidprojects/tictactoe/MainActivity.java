@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ImageView gridClicked = (ImageView) view;
-        if (Endgame == true) {
+        if (Endgame == false) {
             if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
                 //define players turn and prind desired sign in desired grid of the bord
                 if (turn == 0) {
