@@ -27,6 +27,7 @@
             android:layout_marginTop="30dp"
             android:onClick="click"
             android:scaleType="centerInside"
+            android:tag="1"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -36,6 +37,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:onClick="click"
+            android:tag="2"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -46,6 +48,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
             android:onClick="click"
+            android:tag="3"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -56,6 +59,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
+            android:tag="4"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -66,6 +70,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
+            android:tag="5"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -76,6 +81,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
+            android:tag="6"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -86,6 +92,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
+            android:tag="7"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -94,6 +101,7 @@
             android:layout_width="106dp"
             android:layout_height="99dp"
             android:layout_marginLeft="20dp"
+            android:tag="8"
             android:layout_marginTop="20dp"
             android:onClick="click"
             android:scaleType="centerInside"
@@ -101,6 +109,7 @@
 
         <ImageView
             android:id="@+id/imageView9"
+            android:tag="9"
             android:layout_width="106dp"
             android:layout_height="99dp"
             android:layout_marginLeft="16dp"
