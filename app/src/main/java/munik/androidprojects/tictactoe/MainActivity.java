@@ -2,6 +2,7 @@ package munik.androidprojects.tictactoe;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     public int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
     int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
     Boolean Endgame = false;
+    Button playAgainBut = (Button) findViewById(R.id.playAgainBut);
 
     public void click(View view) {
 
@@ -36,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
                         Endgame = true;
                         if (turn == 0) {
                             Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
+                            playAgainBut.setVisibility(View.VISIBLE);
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
+                            playAgainBut.setVisibility(View.VISIBLE);
 
                         }
 
@@ -45,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             } else {
                 Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
+                playAgainBut.setVisibility(View.VISIBLE);
             }
         }
     }
 
     public void playAgain(View view) {
+
 
     }
 
