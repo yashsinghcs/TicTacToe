@@ -10,9 +10,7 @@
         android:layout_width="607dp"
         android:layout_height="396dp"
         android:background="@drawable/tic_tac_toe_board"
-        android:backgroundTint="?attr/colorControlHighlight"
-        android:backgroundTintMode="add"
-        android:onClick="click"
+        android:foregroundTint="@android:color/background_light"
         app:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +25,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="30dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -36,6 +35,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -45,6 +45,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -54,6 +55,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -63,6 +65,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -72,6 +75,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -81,6 +85,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -90,6 +95,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
 
@@ -99,6 +105,7 @@
             android:layout_height="99dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
+            android:onClick="click"
             android:scaleType="centerInside"
             android:textAlignment="textEnd" />
     </androidx.gridlayout.widget.GridLayout>

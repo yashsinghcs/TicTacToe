@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView gridClicked = (ImageView) view;
         gridClicked.setImageResource(R.drawable.cirle);
 
-
     }
 
     @Override
