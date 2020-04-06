@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 gridClicked.setImageResource(R.drawable.cirle);
                 gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                 turn = 1;
-                Toast.makeText(this, gridFilled[0] + "" + gridFilled[1], Toast.LENGTH_SHORT).show();
             } else {
                 gridClicked.setImageResource(R.drawable.cross);
                 gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
@@ -32,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
             //to check win case!!
             for (int[] onewinCase : winCases) {
                 if (gridFilled[onewinCase[0] - 1] == gridFilled[onewinCase[1] - 1] && gridFilled[onewinCase[1] - 1] == gridFilled[onewinCase[2] - 1] && gridFilled[onewinCase[0] - 1] != -1) {
-                    Toast.makeText(this, "SomeONeHAs WON!" + gridFilled[onewinCase[0] - 1] + "" + gridFilled[onewinCase[1] - 1], Toast.LENGTH_SHORT).show();
+                    if (turn == 0) {
+                        Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }
             }
