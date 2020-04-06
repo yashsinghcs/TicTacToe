@@ -14,12 +14,9 @@ public class MainActivity extends AppCompatActivity {
     public int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
     int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
     Boolean Endgame = false;
-    Button playAgainBut = (Button) findViewById(R.id.playAgainBut);
-
     public void click(View view) {
-
-
         ImageView gridClicked = (ImageView) view;
+        Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
         if (Endgame == false) {
             if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
                 //define players turn and prind desired sign in desired grid of the bord
@@ -36,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 for (int[] onewinCase : winCases) {
                     if (gridFilled[onewinCase[0] - 1] == gridFilled[onewinCase[1] - 1] && gridFilled[onewinCase[1] - 1] == gridFilled[onewinCase[2] - 1] && gridFilled[onewinCase[0] - 1] != -1) {
                         Endgame = true;
+
                         if (turn == 0) {
                             Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
-                            playAgainBut.setVisibility(View.VISIBLE);
+                            playAgainButt.setVisibility(View.VISIBLE);
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
-                            playAgainBut.setVisibility(View.VISIBLE);
+                            playAgainButt.setVisibility(View.VISIBLE);
 
                         }
 
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             } else {
                 Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
-                playAgainBut.setVisibility(View.VISIBLE);
+                playAgainButt.setVisibility(View.VISIBLE);
             }
         }
     }
