@@ -3,6 +3,7 @@ package munik.androidprojects.tictactoe;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
                 ImageView gridClicked = (ImageView) view;
                 gridClicked.setImageResource(R.drawable.cross);
                 turn = 0;
+            }
+            for (int[] onewinCase : winCases) {
+                if (gridFilled[onewinCase[0]] == gridFilled[onewinCase[1]] && gridFilled[onewinCase[1]] == gridFilled[onewinCase[2]]) {
+                    Toast.makeText(this, "SomeONeHAs WON!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         }
 
