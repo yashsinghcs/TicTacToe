@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="607dp"
         android:layout_height="396dp"
         android:background="@drawable/tic_tac_toe_board"
@@ -37,8 +38,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:onClick="click"
-            android:tag="2"
             android:scaleType="centerInside"
+            android:tag="2"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -48,8 +49,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
             android:onClick="click"
-            android:tag="3"
             android:scaleType="centerInside"
+            android:tag="3"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -59,8 +60,8 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
-            android:tag="4"
             android:scaleType="centerInside"
+            android:tag="4"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -70,8 +71,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
-            android:tag="5"
             android:scaleType="centerInside"
+            android:tag="5"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -81,8 +82,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
-            android:tag="6"
             android:scaleType="centerInside"
+            android:tag="6"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -92,8 +93,8 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
-            android:tag="7"
             android:scaleType="centerInside"
+            android:tag="7"
             android:textAlignment="textEnd" />
 
         <ImageView
@@ -101,21 +102,38 @@
             android:layout_width="106dp"
             android:layout_height="99dp"
             android:layout_marginLeft="20dp"
-            android:tag="8"
             android:layout_marginTop="20dp"
             android:onClick="click"
             android:scaleType="centerInside"
+            android:tag="8"
             android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView9"
-            android:tag="9"
             android:layout_width="106dp"
             android:layout_height="99dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:onClick="click"
             android:scaleType="centerInside"
+            android:tag="9"
             android:textAlignment="textEnd" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="16dp"
+        android:capitalize="characters"
+        android:onClick="playAgain"
+        android:text="PLAY AGAIN!"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
