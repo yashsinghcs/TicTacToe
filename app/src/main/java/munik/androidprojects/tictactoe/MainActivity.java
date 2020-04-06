@@ -8,24 +8,32 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    //turn =0:player 1 i.e  cross & if turn=1: player2  i.e criss
     public int turn = 0;
+    public int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
+    int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
+
     public void click(View view) {
-        int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
-        int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
-        //turn =0:player 1 i.e  cross & if turn=1: player2  i.e criss
-        for (int freeSpaces = 0; freeSpaces < 9; freeSpaces++) {
+
+
+        ImageView gridClicked = (ImageView) view;
+        if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
+            //define players turn and prind desired sign in desired grid of the bord
             if (turn == 0) {
-                ImageView gridClicked = (ImageView) view;
                 gridClicked.setImageResource(R.drawable.cirle);
+                gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                 turn = 1;
+                Toast.makeText(this, gridFilled[0] + "" + gridFilled[1], Toast.LENGTH_SHORT).show();
             } else {
-                ImageView gridClicked = (ImageView) view;
                 gridClicked.setImageResource(R.drawable.cross);
+                gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                 turn = 0;
             }
+            //to check win case!!
             for (int[] onewinCase : winCases) {
-                if (gridFilled[onewinCase[0]] == gridFilled[onewinCase[1]] && gridFilled[onewinCase[1]] == gridFilled[onewinCase[2]]) {
-                    Toast.makeText(this, "SomeONeHAs WON!", Toast.LENGTH_SHORT).show();
+                if (gridFilled[onewinCase[0] - 1] == gridFilled[onewinCase[1] - 1] && gridFilled[onewinCase[1] - 1] == gridFilled[onewinCase[2] - 1] && gridFilled[onewinCase[0] - 1] != -1) {
+                    Toast.makeText(this, "SomeONeHAs WON!" + gridFilled[onewinCase[0] - 1] + "" + gridFilled[onewinCase[1] - 1], Toast.LENGTH_SHORT).show();
+
                 }
             }
         }
