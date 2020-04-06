@@ -7,12 +7,25 @@
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="409dp"
-        android:layout_height="409dp"
+        android:layout_width="607dp"
+        android:layout_height="396dp"
+        android:background="@drawable/tic_tac_toe_board"
+        android:backgroundTint="?attr/colorControlHighlight"
+        android:backgroundTintMode="add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="106dp"
+            android:layout_height="99dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerInside"
+            android:textAlignment="textEnd"
+            app:srcCompat="@drawable/cirle" />
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
