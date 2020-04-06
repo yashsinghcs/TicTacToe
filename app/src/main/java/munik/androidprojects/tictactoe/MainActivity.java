@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
+            } else {
+                Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
             }
         }
     }
