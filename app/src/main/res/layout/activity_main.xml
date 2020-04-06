@@ -27,8 +27,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="30dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -37,8 +36,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -47,8 +45,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -57,8 +54,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -67,8 +63,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -77,8 +72,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -87,8 +81,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -97,8 +90,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -107,7 +99,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:textAlignment="textEnd"
-            app:srcCompat="@drawable/cirle" />
+            android:textAlignment="textEnd" />
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
