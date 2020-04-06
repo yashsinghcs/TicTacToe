@@ -12,6 +12,7 @@
         android:background="@drawable/tic_tac_toe_board"
         android:backgroundTint="?attr/colorControlHighlight"
         android:backgroundTintMode="add"
+        android:onClick="click"
         app:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
