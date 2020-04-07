@@ -187,7 +187,7 @@
         android:layout_marginBottom="18dp"
         android:fontFamily="casual"
         android:lineSpacingExtra="10sp"
-        android:text="TURN=O"
+        android:text="TURN=(O)"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"

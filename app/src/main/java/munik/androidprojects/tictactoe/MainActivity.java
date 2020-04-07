@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     //to run when we click in grid to input the criss or crooss in the grid
     public void click(View view) {
+        //to have whos turn is it showing on the app
+        TextView turnview = (TextView) findViewById(R.id.turnview);
         //to get the imageview clicked
         ImageView gridClicked = (ImageView) view;
         //too get the play button visible
@@ -43,12 +45,14 @@ public class MainActivity extends AppCompatActivity {
                     //to set the gridview to 0 for criss which makes track index whrere criss is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                     turn = 1;
+                    turnview.setText("TURN=(X)");
                 } else {
                     //to set the grid imageview to cross from resources
                     gridClicked.setImageResource(R.drawable.cross);
                     //to set the gridview to 1 for cross which makes track index whrere cross is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                     turn = 0;
+                    turnview.setText("TURN=(O)");
                 }
                 //to check win case!!
                 for (int[] onewinCase : winCases) {
