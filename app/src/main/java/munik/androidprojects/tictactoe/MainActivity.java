@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
     int pointsx = 0;
     //to calculate point of O
     int pointso = 0;
+    TextView oneWhoWins;
 
     //to run when we click in grid to input the criss or crooss in the grid
     public void click(View view) {
+        oneWhoWins = (TextView) findViewById(R.id.whoIsTheWinnerView);
         //to have whos turn is it showing on the app
         TextView turnview = (TextView) findViewById(R.id.turnview);
         //to get the imageview clicked
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         Endgame = true;
                         if (turn == 0) {
                             Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
+                            oneWhoWins.setText("PLAYER (X) i.e CROSS WON!!");
                             pointsx += 1;
                             //increse point of player X
                             playerX.setText("PLAYER(X)=" + pointsx);
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
+                            oneWhoWins.setText("PLAYER (O) i.e CRISS WON!!");
                             //too get the play button visible
                             playAgainButt.setVisibility(View.VISIBLE);
                             pointso += 1;
