@@ -82,6 +82,17 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
+                boolean boardFilled = false;
+                for (int i : gridFilled) {
+                    if (i == -1) {
+                        boardFilled = true;
+                        break;
+                    }
+
+                }
+                if (boardFilled == true) {
+                    playAgainButt.setVisibility(View.VISIBLE);
+                }
             } // if the grid gets filled and no one wins
             else {
                 Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
