@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -94,10 +93,6 @@ public class MainActivity extends AppCompatActivity {
                     playAgainButt.setVisibility(View.VISIBLE);
                 }
             } // if the grid gets filled and no one wins
-            else {
-                Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
-                //too get the play button visible
-                playAgainButt.setVisibility(View.VISIBLE);
             }
         }
     }
