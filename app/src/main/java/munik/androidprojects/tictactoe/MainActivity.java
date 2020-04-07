@@ -84,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //    to  execute when reset button is clicked
+    public void resetGameForNewPlayers(View view) {
+
+    }
+
     //to execute when play again button is pressed
     public void playAgain(View view) {
 //        to get the button playagain clicked
