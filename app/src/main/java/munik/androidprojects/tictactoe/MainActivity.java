@@ -86,6 +86,15 @@ public class MainActivity extends AppCompatActivity {
 
     //    to  execute when reset button is clicked
     public void resetGameForNewPlayers(View view) {
+        //to get textview of player X which will help to increase points and display
+        TextView playerX = findViewById(R.id.playerX);
+        //to get textview of player O which will help to increase points and display
+        TextView playerO = findViewById(R.id.playerO);
+//        TO SET THE PLAYER X VALUE TO 0
+        playerO.setText("PLAYER(O)=0");
+//        TO SET THE PLAYER O VALUE TO 0
+        playerX.setText("PLAYER(O)=0");
+
 
     }
 
