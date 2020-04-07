@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F5F5"
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
@@ -121,12 +122,12 @@
     </androidx.gridlayout.widget.GridLayout>
 
 
-
     <TextView
         android:id="@+id/playerX"
         android:layout_width="175dp"
         android:layout_height="44dp"
         android:text="PLAYER(X)=0 "
+        android:textColor="#24D318"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +142,7 @@
         android:layout_height="44dp"
         android:layout_marginLeft="200dp"
         android:text="PLAYER(O)=0 "
+        android:textColor="#0C30E6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -206,6 +208,7 @@
         android:layout_marginBottom="15dp"
         android:text="PLAYER (X) i.e CROSS WON!!"
         android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
