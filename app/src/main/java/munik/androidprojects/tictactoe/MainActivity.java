@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if (boardFilled == false) {
+                    oneWhoWins.setText("NOBODY WON THIS ROUND !!!");
                     playAgainButt.setVisibility(View.VISIBLE);
                 }
             } // if the grid gets filled and no one wins
