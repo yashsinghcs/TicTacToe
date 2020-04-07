@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
             ImageView counter = (ImageView) gridView.getChildAt(i);
             counter.setImageDrawable(null);
         }
+        turn = 0;
+        gridFilled = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, -1};
+        Endgame = false;
+
     }
 
     @Override
