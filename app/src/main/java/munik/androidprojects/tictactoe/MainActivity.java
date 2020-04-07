@@ -15,13 +15,13 @@ public class MainActivity extends AppCompatActivity {
     public int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
     int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
     Boolean Endgame = false;
+    int pointsx = 0;
+    int pointso = 0;
     public void click(View view) {
         ImageView gridClicked = (ImageView) view;
         Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
         TextView playerX = (TextView) findViewById(R.id.playerX);
         TextView playerO = (TextView) findViewById(R.id.playerO);
-        int pointsx = 0;
-        int pointso = 0;
         if (Endgame == false) {
             if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
                 //define players turn and prind desired sign in desired grid of the bord
