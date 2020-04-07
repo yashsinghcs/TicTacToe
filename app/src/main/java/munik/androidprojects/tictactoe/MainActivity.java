@@ -53,8 +53,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View view) {
-
-
+        Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
+        playAgainButt.setVisibility(View.INVISIBLE);
+        androidx.gridlayout.widget.GridLayout gridView = (androidx.gridlayout.widget.GridLayout) findViewById(R.id.gridddy);
+        for (int i = 0; i < gridView.getChildCount(); i++) {
+            ImageView counter = (ImageView) gridView.getChildAt(i);
+            counter.setImageDrawable(null);
+        }
     }
 
     @Override

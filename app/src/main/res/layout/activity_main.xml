@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/gridddy"
         android:layout_width="607dp"
         android:layout_height="396dp"
         android:background="@drawable/tic_tac_toe_board"
@@ -132,7 +132,7 @@
         android:onClick="playAgain"
         android:text="PLAY AGAIN!"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintBottom_toTopOf="@+id/gridddy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
