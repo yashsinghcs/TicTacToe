@@ -120,22 +120,7 @@
             android:textAlignment="textEnd" />
     </androidx.gridlayout.widget.GridLayout>
 
-    <Button
-        android:id="@+id/playAgainBut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="16dp"
-        android:capitalize="characters"
-        android:onClick="playAgain"
-        android:text="PLAY AGAIN!"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/gridddy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/playerX"
@@ -163,5 +148,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridddy"
         app:layout_constraintVertical_bias="0.266" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gridddy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/playAgainBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PLAY AGAIN!" />
+
+        <Button
+            android:id="@+id/resetGameBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RESET GAME!" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
