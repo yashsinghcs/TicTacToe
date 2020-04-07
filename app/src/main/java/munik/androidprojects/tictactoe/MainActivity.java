@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     if (gridFilled[onewinCase[0] - 1] == gridFilled[onewinCase[1] - 1] && gridFilled[onewinCase[1] - 1] == gridFilled[onewinCase[2] - 1] && gridFilled[onewinCase[0] - 1] != -1) {
                         Endgame = true;
                         if (turn == 0) {
-                            Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
                             oneWhoWins.setText("PLAYER (X) i.e CROSS WON!!");
                             pointsx += 1;
                             //increse point of player X
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             playAgainButt.setVisibility(View.VISIBLE);
 
                         } else {
-                            Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
                             oneWhoWins.setText("PLAYER (O) i.e CRISS WON!!");
                             //too get the play button visible
                             playAgainButt.setVisibility(View.VISIBLE);
