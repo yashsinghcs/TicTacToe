@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
             } // if the grid gets filled and no one wins
             }
         }
-    }
 
 
     //    to  execute when reset button is clicked
