@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
         playerO.setText("PLAYER(O)=0");
 //        TO SET THE PLAYER O VALUE TO 0
         playerX.setText("PLAYER(O)=0");
+        //set the turn to default after the game resets
         turn = 0;
+        //call playAgain method to set the initial satate of the board
         playAgain(view);
-
-
     }
 
     //to execute when play again button is pressed
