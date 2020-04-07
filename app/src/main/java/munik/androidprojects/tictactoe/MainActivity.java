@@ -90,14 +90,18 @@ public class MainActivity extends AppCompatActivity {
 
     //    to  execute when reset button is clicked
     public void resetGameForNewPlayers(View view) {
+        //to have whos turn is it showing on the app and reset it to zero
+        TextView turnview = (TextView) findViewById(R.id.turnview);
         //to get textview of player X which will help to increase points and display
         TextView playerX = findViewById(R.id.playerX);
         //to get textview of player O which will help to increase points and display
         TextView playerO = findViewById(R.id.playerO);
+        turnview.setText("TURN=(O)");
 //        TO SET THE PLAYER X VALUE TO 0
         playerO.setText("PLAYER(O)=0");
 //        TO SET THE PLAYER O VALUE TO 0
         playerX.setText("PLAYER(O)=0");
+        playAgain(view);
 
 
     }
