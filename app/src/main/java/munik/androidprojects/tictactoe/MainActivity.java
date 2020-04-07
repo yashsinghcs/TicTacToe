@@ -16,27 +16,37 @@ public class MainActivity extends AppCompatActivity {
     public int[] gridFilled = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
     //total no of wincases
     int[][] winCases = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 4, 7}, {2, 5, 8}, {3, 6, 9}, {1, 5, 9}, {3, 5, 7}};
-    //boolean to check weather one game is over or not
+    //boolean to check weather one game is over or not by seeing if sone has won or not
     Boolean Endgame = false;
     //tocalculate point of X
     int pointsx = 0;
     //to calculate point of O
     int pointso = 0;
+
+    //to run when we click in grid to input the criss or crooss in the grid
     public void click(View view) {
         //to get the imageview clicked
         ImageView gridClicked = (ImageView) view;
-        Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
-        TextView playerX = (TextView) findViewById(R.id.playerX);
-        TextView playerO = (TextView) findViewById(R.id.playerO);
+        //too get the play button visible
+        Button playAgainButt = findViewById(R.id.playAgainBut);
+        //to get textview of player X which will help to increase points and display
+        TextView playerX = findViewById(R.id.playerX);
+        //to get textview of player O which will help to increase points and display
+        TextView playerO = findViewById(R.id.playerO);
         if (Endgame == false) {
+            //check if any element of the grid is still empty
             if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
                 //define players turn and print desired sign in desired grid of the bord
                 if (turn == 0) {
+                    //to set the grid imageview to criss from image resourse
                     gridClicked.setImageResource(R.drawable.cirle);
+                    //to set the gridview to 0 for criss which makes track index whrere criss is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                     turn = 1;
                 } else {
+                    //to set the grid imageview to cross from resources
                     gridClicked.setImageResource(R.drawable.cross);
+                    //to set the gridview to 1 for cross which makes track index whrere cross is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
                     turn = 0;
                 }
@@ -50,10 +60,12 @@ public class MainActivity extends AppCompatActivity {
                             pointsx += 1;
                             //increse point of player X
                             playerX.setText("PLAYER(X)=" + pointsx);
+                            //too get the play button visible
                             playAgainButt.setVisibility(View.VISIBLE);
 
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
+                            //too get the play button visible
                             playAgainButt.setVisibility(View.VISIBLE);
                             pointso += 1;
                             //increase the point of player O
@@ -65,16 +77,26 @@ public class MainActivity extends AppCompatActivity {
             } // if the grid gets filled and no one wins
             else {
                 Toast.makeText(this, "NoOneWins", Toast.LENGTH_SHORT).show();
+                //too get the play button visible
                 playAgainButt.setVisibility(View.VISIBLE);
             }
         }
     }
+
+
+    //to execute when play again button is pressed
     public void playAgain(View view) {
-        Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
+//        to get the button playagain clicked
+        Button playAgainButt = findViewById(R.id.playAgainBut);
+//        to make the button invisible for the new game
         playAgainButt.setVisibility(View.INVISIBLE);
-        androidx.gridlayout.widget.GridLayout gridView = (androidx.gridlayout.widget.GridLayout) findViewById(R.id.gridddy);
+//        to get the gridview
+        androidx.gridlayout.widget.GridLayout gridView = findViewById(R.id.gridddy);
+        //to again initialise the the content of the grids imageview to drawableImage "null"
         for (int i = 0; i < gridView.getChildCount(); i++) {
+            //to get the imageview at gridview ith location
             ImageView counter = (ImageView) gridView.getChildAt(i);
+            //to set the imageview to null
             counter.setImageDrawable(null);
         }
         //initialise the gridfilled for next game
