@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         playerO.setText("PLAYER(O)=0");
 //        TO SET THE PLAYER O VALUE TO 0
         playerX.setText("PLAYER(O)=0");
+        turn = 0;
         playAgain(view);
 
 
