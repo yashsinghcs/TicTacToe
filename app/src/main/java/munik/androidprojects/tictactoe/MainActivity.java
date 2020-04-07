@@ -48,9 +48,8 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
                             playAgainButt.setVisibility(View.VISIBLE);
-
                             pointso += 1;
-                            playerX.setText("PLAYER(O)=" + pointso);
+                            playerO.setText("PLAYER(O)=" + pointso);
 
 
                         }
