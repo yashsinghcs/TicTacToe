@@ -168,7 +168,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:onClick="playAgain"
-            android:text="PLAY AGAIN!"
+            android:text="NEXT ROUND"
             android:visibility="invisible" />
 
         <Button
