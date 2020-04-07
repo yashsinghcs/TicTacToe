@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int pointsx = 0;
     //to calculate point of O
     int pointso = 0;
+    //view for output the one who win else blank
     TextView oneWhoWins;
 
     //to run when we click in grid to input the criss or crooss in the grid
@@ -45,24 +46,31 @@ public class MainActivity extends AppCompatActivity {
                     gridClicked.setImageResource(R.drawable.cirle);
                     //to set the gridview to 0 for criss which makes track index whrere criss is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
+//                    to flip the turn
                     turn = 1;
+                    //to display the turn on app
                     turnview.setText("TURN=(X)");
                 } else {
                     //to set the grid imageview to cross from resources
                     gridClicked.setImageResource(R.drawable.cross);
                     //to set the gridview to 1 for cross which makes track index whrere cross is mapped
                     gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] = turn;
+//                    to flip the turn
                     turn = 0;
+                    //to display the turn on app
                     turnview.setText("TURN=(O)");
                 }
                 //to check win case!!
                 for (int[] onewinCase : winCases) {
                     //condition to check winning cases with indexez filled with criss or cross
                     if (gridFilled[onewinCase[0] - 1] == gridFilled[onewinCase[1] - 1] && gridFilled[onewinCase[1] - 1] == gridFilled[onewinCase[2] - 1] && gridFilled[onewinCase[0] - 1] != -1) {
+                        //if someone wins , then endgame gets true
                         Endgame = true;
+
                         if (turn == 0) {
 //                            Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
                             oneWhoWins.setText("PLAYER (X) i.e CROSS WON!!");
+//                            to increase X's point by 1'
                             pointsx += 1;
                             //increse point of player X
                             playerX.setText("PLAYER(X)=" + pointsx);
@@ -81,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
+                //if board gets filled with this input then it gives false else true which helps to
+                // determine if bord is filled and end the game round
                 boolean boardFilled = false;
                 for (int i : gridFilled) {
                     if (i == -1) {
@@ -89,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
+                //checks if bord filled is false meaning that bord is filled completely
                 if (boardFilled == false) {
                     oneWhoWins.setText("NOBODY WON THIS ROUND !!!");
                     playAgainButt.setVisibility(View.VISIBLE);
