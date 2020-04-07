@@ -118,10 +118,10 @@ public class MainActivity extends AppCompatActivity {
         //to get textview of player O which will help to increase points and display
         TextView playerO = findViewById(R.id.playerO);
         turnview.setText("TURN=(O)");
-//        TO SET THE PLAYER X VALUE TO 0
-        playerO.setText("PLAYER(O)=0");
 //        TO SET THE PLAYER O VALUE TO 0
-        playerX.setText("PLAYER(O)=0");
+        playerO.setText("PLAYER(O)=0");
+//        TO SET THE PLAYER X VALUE TO 0
+        playerX.setText("PLAYER(X)=0");
         //set the turn to default after the game resets
         turn = 0;
         //call playAgain method to set the initial satate of the board
