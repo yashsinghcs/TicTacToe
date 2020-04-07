@@ -150,6 +150,7 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="50dp"
         android:layout_marginBottom="59dp"
@@ -162,7 +163,7 @@
         <Button
             android:id="@+id/playAgainBut"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:onClick="playAgain"
             android:text="PLAY AGAIN!" />
@@ -170,11 +171,30 @@
         <Button
             android:id="@+id/resetGameBut"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:onClick="resetGameForNewPlayers"
             android:text="RESET GAME!" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/turnview"
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="10sp"
+        android:text="TURN=O"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridddy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
