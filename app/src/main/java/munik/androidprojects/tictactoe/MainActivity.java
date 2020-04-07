@@ -113,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
 
     //to execute when play again button is pressed
     public void playAgain(View view) {
+//        to vanish the reselt text which shows who won thw game
+        oneWhoWins = (TextView) findViewById(R.id.whoIsTheWinnerView);
+        oneWhoWins.setText("");
 //        to get the button playagain clicked
         Button playAgainButt = findViewById(R.id.playAgainBut);
 //        to make the button invisible for the new game
