@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
     public void click(View view) {
         ImageView gridClicked = (ImageView) view;
         Button playAgainButt = (Button) findViewById(R.id.playAgainBut);
+        TextView playerX = (TextView) findViewById(R.id.playerX);
+        TextView playerO = (TextView) findViewById(R.id.playerO);
+        int pointsx = 0;
+        int pointso = 0;
         if (Endgame == false) {
             if (gridFilled[Integer.parseInt(gridClicked.getTag().toString()) - 1] == -1) {
                 //define players turn and prind desired sign in desired grid of the bord
@@ -36,10 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
                         if (turn == 0) {
                             Toast.makeText(this, "crossWON!!", Toast.LENGTH_SHORT).show();
+                            pointsx += 1;
+                            playerX.setText("PLAYER(X)=" + pointsx);
                             playAgainButt.setVisibility(View.VISIBLE);
+
                         } else {
                             Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
                             playAgainButt.setVisibility(View.VISIBLE);
+
+                            pointso += 1;
+                            playerX.setText("PLAYER(O)=" + pointso);
+
 
                         }
 
