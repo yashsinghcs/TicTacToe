@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-                if (boardFilled == true) {
+                if (boardFilled == false) {
                     playAgainButt.setVisibility(View.VISIBLE);
                 }
             } // if the grid gets filled and no one wins
