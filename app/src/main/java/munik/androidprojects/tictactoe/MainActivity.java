@@ -1,5 +1,6 @@
 package munik.androidprojects.tictactoe;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class MainActivity extends AppCompatActivity {
+    MediaPlayer mediaPlayer;
 
 
     //turn =0:player 1 i.e  cross & if turn=1: player2  i.e criss
@@ -79,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                             playerX.setText("PLAYER(X)=" + pointsx);
                             //too get the play button visible
                             playAgainButt.setVisibility(View.VISIBLE);
+                            mediaPlayer.start();
+                            mediaPlayer.setLooping(true);
 
                         } else {
 //                            Toast.makeText(this, "crisWON!!", Toast.LENGTH_SHORT).show();
@@ -88,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                             pointso += 1;
                             //increase the point of player O
                             playerO.setText("PLAYER(O)=" + pointso);
+                            mediaPlayer.start();
+                            mediaPlayer.setLooping(true);
                         }
 
                     }
@@ -114,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
     //    to  execute when reset button is clicked
     public void resetGameForNewPlayers(View view) {
+        mediaPlayer.pause();
         //to have whos turn is it showing on the app and reset it to zero
         TextView turnview = (TextView) findViewById(R.id.turnview);
         //to get textview of player X which will help to increase points and display
@@ -133,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     //to execute when play again button is pressed
     public void playAgain(View view) {
+        mediaPlayer.pause();
 //        to vanish the reselt text which shows who won thw game
         oneWhoWins = (TextView) findViewById(R.id.whoIsTheWinnerView);
         oneWhoWins.setText("");
@@ -160,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        mediaPlayer = MediaPlayer.create(this, R.raw.winsound);
 
     }
 }
